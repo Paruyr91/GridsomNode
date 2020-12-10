@@ -10,6 +10,7 @@ require('dotenv').config();
 const csv = require('csv-parser');
 const createCsvWriter = require('csv-writer').createObjectCsvWriter;
 const jwt = require('jsonwebtoken');
+const dns = require('dns')
 
 
 const url = 'http://localhost:2368/ghost/api/v3/admin'
@@ -20,19 +21,19 @@ const url = 'http://localhost:2368/ghost/api/v3/admin'
 let key = "5fd063a3f7b1a7000118c184:1a4c1dde174848cff0947feb2a665ef44de91d8fbd5c51992c6da6e467e598dd"   
 const [id, secret] = key.split(':');
 
- var val=[]
-fs.createReadStream('adminKeys.csv')
-  .pipe(csv())
-  .on('data', (row) => {
+//  var val=[]
+// fs.createReadStream('adminKeys.csv')
+//   .pipe(csv())
+//   .on('data', (row) => {
        
-     val.push(row)
-    console.log(val,"in")
-  })
-  .on('end', () => {
-    console.log('CSV file successfully processed');
-  });
+//      val.push(row)
+//     console.log(val,"in")
+//   })
+//   .on('end', () => {
+//     console.log('CSV file successfully processed');
+//   });
  
-  console.log(val,'out') 
+//   console.log(val,'out') 
   
   
 
@@ -134,9 +135,15 @@ const headers = { Authorization: `Ghost ${token}` };
 
   })
 
-
+  dns.resolve("testdomain.com", 'ANY', (err, records) => {
+    if (err) {
+      console.log("Error: ", err);
+    } else {
+      console.log(records);
+    }
+  });
   
 
 
-server.listen(80)
+server.listen(80,'http://gridsome.hotcocoa.design/')
   
