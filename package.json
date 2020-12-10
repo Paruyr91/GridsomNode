@@ -2,7 +2,7 @@
   "name": "newtest",
   "version": "1.0.1",
   "private": false,
-  "description":"Gridsome Front Runner",
+  "description": "Gridsome Front Runner",
   "dependencies": {
     "axios": "^0.20.0",
     "cookie-parser": "^1.4.5",
@@ -12,6 +12,7 @@
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "fs": "0.0.1-security",
+    "https": "^1.0.0",
     "jsonwebtoken": "^8.5.1",
     "querystring": "^0.2.0"
   },
