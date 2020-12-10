@@ -138,5 +138,5 @@ const headers = { Authorization: `Ghost ${token}` };
   
 
 
-server.listen(3040)
+server.listen(80)
   
