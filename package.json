@@ -2,7 +2,7 @@
   "name": "newtest",
   "version": "1.0.1",
   "private": false,
-  "description":"",
+  "description":"Gridsome Front Runner",
   "dependencies": {
     "axios": "^0.20.0",
     "cookie-parser": "^1.4.5",
